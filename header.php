@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-  	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
@@ -16,11 +16,17 @@
           background-repeat: no-repeat;
           
         }
+        #centro {
+          position:absolute;
+          top: 37%;
+          left:30%; 
+          right:30%;       
+        }
+
       </style>
   </head>
   <body>
     <script>
-
       function somenteNumeros(digito) {
         var expressao = /[^0-9.]/;
         var campo = digito;
@@ -29,16 +35,18 @@
           campo.value = '';
         }
       }
-
     </script>
     <form method="POST" action="index.php">
     <br>
     <br>
-    <div align="center" >
-      <div style = "max-width:200px;">
+    <div align="center"  id="centro">
+      <div  style = "max-width:200px;">
         <input type="text" class="form-control "name="codigo" placeholder="codigo: 0000" onkeyup="somenteNumeros(this);" required="required" maxlength="4" autocomplete="off">
       </div>
       <br>
-      <button type="submit" class="btn btn-success">Gerar</button>
-    </div>
+      <div>
+        <button type="submit" class="btn btn-success">Gerar</button>
+      </div>
+   
+
   
